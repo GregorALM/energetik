@@ -1,11 +1,66 @@
 @import 'vendor/normalize';
 @import 'vendor/boilerplate';
 @import 'vendor/helpers';
+@import 'vendor/fonts';
 
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+// Шапка
+
+header {
+	width: 100%;
+	padding-top: 45px;
+	margin-bottom: 45px;
+
+	* {
+		display: inline-block;
+	}
+
+	
+	
+	nav {
+		width: 100%;
+		text-align: right;
+		position: relative;
+
+		.logo {
+			width: 49%;
+			position: absolute;
+			left: 0;
+			top: 0px;
+			width: 148px;
+		}
+
+		ul {
+			li {
+				margin-left: 50px;
+			}
+		}
+	}
+}
+
+// Проекты и баннеры
+
+#projects {
+	ul {
+		margin-left: -35px;
+		padding: 0;
+
+		li {
+			list-style-type: none;
+			float: left;
+			height: 192px;
+			width: 192px;
+			margin-left: 35px;
+			margin-bottom: 35px;
+			background-color: #555;
+		}
+	}
+}
+
 
 
 
