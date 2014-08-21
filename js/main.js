@@ -150,15 +150,19 @@
 				scrollwheel: false,
 				lat: 59.973396,
 				lng: 30.3398016
-			});
-			map.addMarker({
+			}),
+				infoWindow = new google.maps.InfoWindow({
+			    content: '<p>Б. Сампсониевский, 61</p>'
+			}),
+				marker = map.addMarker({
 				lat: 59.973396,
 				lng: 30.3398016,
 				title: 'Б. Сампсониевский, 61',
-				infoWindow: {
-				  content: '<p>Б. Сампсониевский, 61</p>'
-				}	
+				icon: 'img/marker.png',
+				infoWindow: infoWindow
 			});
+			infoWindow.open(map,marker);
+
 		},
 
 		// заказ дополнительных проектов с сервера
