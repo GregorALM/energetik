@@ -21,6 +21,7 @@
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
+		<!-- Шапка, логотип с навигацией -->
 		<header class="container">
 			<nav>
 				<img src="img/logo.svg" alt="Логотип" class="logo">
@@ -33,6 +34,7 @@
 				</ul>
 			</nav>
 		</header>
+		<!-- секция контактов, выплывают по клику на пункт в шапке -->
 		<section id="contacts">
 			<div class="container clearfix">
 				<div class="description">
@@ -47,9 +49,15 @@
 				<img src="img/close.svg" alt="Закрыть" class="close">
 			</div>
 		</section>
+		<!-- Секция проектов, выводится списком. В этот же список сервер может добавить баннер с id = "banner1 .. banner4", приложение само расположет его как надо, в зависимости от настроек в объекте settings(можно подтянуть ajax-ом). Сервер всегда должен отдавать минимум 24 элемента li, лишние (если разрешение маленькое или есть баннер) приложение скроет. -->
 		<section class="container" id="projects">
-		<!-- (li>img[src=img/projects/project-$.jpg]+.cower>img.icon+p.name+p.type) -->
 			<ul class="clearfix">
+				<li id="banner1">
+					<img src="http://lorempixel.com/700/500/cats" alt="временное фото">
+					<div class="banner-cover">
+						<h1>Lorem ipsum dolor sit amet</h1>
+					</div>
+				</li>
 				<li><img src="img/projects/project-1.jpg" alt=""><a href="#" class="cover">
 						<img src="img/eye.svg" alt="Подробнее" class="icon">
 						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
@@ -90,10 +98,93 @@
 						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
 						<p class="type">Печатная продукция</p>
 					</a></li>
+					<li><img src="img/projects/project-1.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-2.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-3.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-4.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-5.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-6.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-7.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-8.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+					<li><img src="img/projects/project-1.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-2.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-3.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-4.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-5.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-6.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-7.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-8.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
 			</ul>
+			<!-- кнопка, по нажатию которой подгружается еще 3 строки проектов, если подрузилось <3 строк, кнопка становится не активной -->
 			<button class="center-block mainBtn" id="more">Еще проекты</button>
 		</section>
+		<!-- секция карты, инициализируется в приложении -->
 		<section id="map"></section>
+		<!-- обратная связь, за обработку на сервере не парился -->
 		<section class="center-block" id="feedback">
 			<h1>У вас есть к нам вопрос </h1>
 			<h1 class="secLine">или предложение?</h1>
@@ -104,6 +195,7 @@
 				<button type="submet" class="mainBtn">Отправить</button>
 			</form>
 		</section>
+		<!-- подвальчик -->
 		<footer>
 			<div class="container">
 				© ООО «АКК «Энегретик», 2014
