@@ -1,33 +1,53 @@
 @import 'vendor/normalize';
 @import 'vendor/boilerplate';
-@import 'vendor/helpers';
-@import 'vendor/fonts';
+@import 'helpers';
+@import 'fonts';
+@import 'queries';
 
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+// Цветовые переменные
+
+$orange: #f1840a;
+$orangeLite: #efb97b;
+$orangeCover: rgba(241,132,10,.9);
+$inputsColor: #ebebeb;
+$inpTextColor: #959595;
+
+
+//Общие стили
+
+body {
+	min-width: 1300px;
+}
+
+.mainBtn {
+	background-color: transparent;
+	padding: 15px 45px;
+	border: 3px solid $orange;
+	letter-spacing: 1.6px;
+}
 
 // Шапка
 
 header {
 	width: 100%;
-	padding-top: 45px;
-	margin-bottom: 45px;
+	padding-top: 40px;
+	margin-bottom: 60px;
 
 	* {
 		display: inline-block;
 	}
-
-	
 	
 	nav {
 		width: 100%;
 		text-align: right;
 		position: relative;
+		padding-top: 16px;
 
 		.logo {
-			width: 49%;
 			position: absolute;
 			left: 0;
 			top: 0px;
@@ -35,29 +55,212 @@ header {
 		}
 
 		ul {
+			margin: 0;
 			li {
-				margin-left: 50px;
+				margin-left: 37px;
+
+				a {
+					color: black;
+					text-decoration: none;
+				}
+				
 			}
 		}
 	}
 }
 
+#contacts {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-width: 1300px;
+	background-color: $orange;
+	color: #fff;
+	padding-top: 70px;
+	padding-bottom: 25px;
+	z-index: 2;
+
+	.description {
+		float: left;
+
+		p {
+			line-height: 1.6;
+			font-size: 14px;
+		}
+
+		a {
+			color: $orangeLite;
+		}
+	}
+
+	.phone {
+		float: left;
+		margin-left: 80px;
+
+		h1 {
+			margin: 16px 0;
+			margin-bottom: 8px; 
+			padding: 0;
+			font-size: 24px; 
+		}
+
+		a {
+			color: #fff;
+		}
+	}
+
+	.close {
+		float: right;
+		margin-top: 20px;
+		cursor: pointer;
+	}
+}
+
 // Проекты и баннеры
+
+$elmtWidth: 192px;
+$gap: 35px;
 
 #projects {
 	ul {
-		margin-left: -35px;
+		margin-left: -$gap;
 		padding: 0;
+		margin-bottom: 20px;
+
+		#banner1 {
+			width: 3*$elmtWidth + 2*$gap;
+			height: 2*$elmtWidth + $gap;
+		}
+
+		#banner2 {
+			width: 3*$elmtWidth + 2*$gap;
+			height: $elmtWidth;
+		}
+
+		#banner3, #banner4 {
+			width: 2*$elmtWidth + $gap;
+			height: $elmtWidth;
+		}
 
 		li {
 			list-style-type: none;
 			float: left;
-			height: 192px;
-			width: 192px;
-			margin-left: 35px;
-			margin-bottom: 35px;
+			height: $elmtWidth;
+			width: $elmtWidth;
+			margin-left: $gap;
+			margin-bottom: $gap;
 			background-color: #555;
+			position: relative;
+			
+			.cover {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: $elmtWidth;
+				height: $elmtWidth;
+				background-color: $orangeCover;
+				color: #fff;
+				line-height: 1.8;
+				font-size: 12px;
+				padding: 15px;
+				text-decoration: none;
+				opacity: 0;
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+				transition: all .2s;
+
+				.icon {
+					width: 25px;
+					margin-bottom: 30px;
+				}
+
+				.name {
+					margin-bottom: 22px;
+				}
+
+				.type {
+					color: $orangeLite;
+					position: relative;
+
+					&:before {
+						content: '_';
+						color: #fff;
+						position: absolute;
+						top: -20px;
+					}
+				}
+
+				&:hover {
+					opacity: 1;
+					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+				}
+			}
 		}
+	}
+
+	#more {
+		margin-bottom: 105px;
+	} 
+}
+
+// Карта
+
+#map {
+	margin-bottom: 110px;
+}
+
+// Карта
+
+#feedback {
+	width: 565px;
+	margin-bottom: 125px;
+
+	* {
+		display: block;
+	}
+
+	h1 {
+		color: $orange;
+		border-bottom: 4px solid black;
+		font-size: 35px;
+		line-height: 1;
+		margin: 10px 0;
+		padding-bottom: 2px;
+	}
+
+	.secLine {
+		margin-bottom: 45px;
+	}
+
+	form {
+		input, textarea {
+			width: 100%;
+			margin-bottom: 15px;
+			border: none;
+			background-color: $inputsColor;
+			color: $inpTextColor;
+			letter-spacing: 1.8px;
+			padding: 18px 28px;
+		}
+
+		textarea {
+			max-height: 250px;
+			margin-bottom: 43px;
+		}
+	}
+}
+
+// Подвал
+
+footer {
+	height: 145px;
+	background-color: $inputsColor;
+
+	div {
+		padding-top: 15px;
+		font-size: 12px;
+		letter-spacing: 0.2px;
 	}
 }
 

@@ -25,58 +25,95 @@
 			<nav>
 				<img src="img/logo.svg" alt="Логотип" class="logo">
 				<ul>
-					<li>О нас</li>
-					<li>Портфолио</li>
-					<li>Клиенты</li>
-					<li>Блог</li>
-					<li>Контакты</li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Портфолио</a></li>
+					<li><a href="#">Клиенты</a></li>
+					<li><a href="#">Блог</a></li>
+					<li><a href="#" id="showContacts">Контакты</a></li>
 				</ul>
 			</nav>
 		</header>
+		<section id="contacts">
+			<div class="container clearfix">
+				<div class="description">
+					<p>Агентство корпоративных коммуникаций «Энергетик»<br>
+						Санкт-Петербург, Б. Сампсониевский, 61</p>
+					<a href="#map" class="scrollToMap">На карте</a>
+				</div>
+				<div class="phone">
+					<h1>(812) 336-50-61</h1>
+					<a href="http://www.gazrossii.ru">www.gazrossii.ru</a>
+				</div>
+				<img src="img/close.svg" alt="Закрыть" class="close">
+			</div>
+		</section>
 		<section class="container" id="projects">
+		<!-- (li>img[src=img/projects/project-$.jpg]+.cower>img.icon+p.name+p.type) -->
 			<ul class="clearfix">
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
-				<li class="project"></li>
+				<li><img src="img/projects/project-1.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-2.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-3.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-4.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-5.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-6.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-7.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
+				<li><img src="img/projects/project-8.jpg" alt=""><a href="#" class="cover">
+						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
+						<p class="type">Печатная продукция</p>
+					</a></li>
 			</ul>
-			<button class="center-block" id="more"></button>
+			<button class="center-block mainBtn" id="more">Еще проекты</button>
 		</section>
 		<section id="map"></section>
 		<section class="center-block" id="feedback">
-			<h1></h1>
+			<h1>У вас есть к нам вопрос </h1>
+			<h1 class="secLine">или предложение?</h1>
 			<form action="">
-				<input type="text" name="" id="">
-				<input type="text" name="" id="">
-				<textarea name="" id="" cols="30" rows="10"></textarea>
-				<button></button>
+				<input type="text" name="name" placeholder="Кто вы?">
+				<input type="email" name="email" placeholder="Ваш e-mail">
+				<textarea name="question" rows="6" placeholder="Введите текст сообщения"></textarea>
+				<button type="submet" class="mainBtn">Отправить</button>
 			</form>
 		</section>
-		<footer></footer>
+		<footer>
+			<div class="container">
+				© ООО «АКК «Энегретик», 2014
+			</div>
+		</footer>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+		<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+		<script src="js/main-min.js"></script>
 
-		<script src="js/main.js"></script>
 	</body>
 </html>

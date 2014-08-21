@@ -452,6 +452,11 @@ table {
 /* ==========================================================================
    Boilerplate styles
    ========================================================================== */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+
 html,
 button,
 input,
@@ -572,36 +577,98 @@ textarea {
   src: url("../fonts/FiraMono-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraMono-Bold.woff") format("woff"), url("../fonts/FiraMono-Bold.ttf") format("truetype"), url("../fonts/FiraMono-Bold.svg#FiraMono") format("svg");
   font-weight: normal;
   font-style: normal; }
-* {
+body {
   font-family: 'FiraMono';
   font-size: 13px;
-  font-weight: normal; }
+  font-weight: normal;
+  line-height: 1.2; }
 
+@media (max-width: 1366px) {
+  .container {
+    width: 1100px; } }
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+  min-width: 1300px; }
+
+.mainBtn {
+  background-color: transparent;
+  padding: 15px 45px;
+  border: 3px solid #f1840a;
+  letter-spacing: 1.6px; }
+
 header {
   width: 100%;
-  padding-top: 45px;
-  margin-bottom: 45px; }
+  padding-top: 40px;
+  margin-bottom: 60px; }
   header * {
     display: inline-block; }
   header nav {
     width: 100%;
     text-align: right;
-    position: relative; }
+    position: relative;
+    padding-top: 16px; }
     header nav .logo {
-      width: 49%;
       position: absolute;
       left: 0;
       top: 0px;
       width: 148px; }
-    header nav ul li {
-      margin-left: 50px; }
+    header nav ul {
+      margin: 0; }
+      header nav ul li {
+        margin-left: 37px; }
+        header nav ul li a {
+          color: black;
+          text-decoration: none; }
+
+#contacts {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1300px;
+  background-color: #f1840a;
+  color: #fff;
+  padding-top: 70px;
+  padding-bottom: 25px;
+  z-index: 2; }
+  #contacts .description {
+    float: left; }
+    #contacts .description p {
+      line-height: 1.6;
+      font-size: 14px; }
+    #contacts .description a {
+      color: #efb97b; }
+  #contacts .phone {
+    float: left;
+    margin-left: 80px; }
+    #contacts .phone h1 {
+      margin: 16px 0;
+      margin-bottom: 8px;
+      padding: 0;
+      font-size: 24px; }
+    #contacts .phone a {
+      color: #fff; }
+  #contacts .close {
+    float: right;
+    margin-top: 20px;
+    cursor: pointer; }
 
 #projects ul {
   margin-left: -35px;
-  padding: 0; }
+  padding: 0;
+  margin-bottom: 20px; }
+  #projects ul #banner1 {
+    width: 646px;
+    height: 419px; }
+  #projects ul #banner2 {
+    width: 646px;
+    height: 192px; }
+  #projects ul #banner3, #projects ul #banner4 {
+    width: 419px;
+    height: 192px; }
   #projects ul li {
     list-style-type: none;
     float: left;
@@ -609,4 +676,76 @@ header {
     width: 192px;
     margin-left: 35px;
     margin-bottom: 35px;
-    background-color: #555; }
+    background-color: #555;
+    position: relative; }
+    #projects ul li .cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 192px;
+      height: 192px;
+      background-color: rgba(241, 132, 10, 0.9);
+      color: #fff;
+      line-height: 1.8;
+      font-size: 12px;
+      padding: 15px;
+      text-decoration: none;
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      -webkit-transition: all .2s;
+              transition: all .2s; }
+      #projects ul li .cover .icon {
+        width: 25px;
+        margin-bottom: 30px; }
+      #projects ul li .cover .name {
+        margin-bottom: 22px; }
+      #projects ul li .cover .type {
+        color: #efb97b;
+        position: relative; }
+        #projects ul li .cover .type:before {
+          content: '_';
+          color: #fff;
+          position: absolute;
+          top: -20px; }
+      #projects ul li .cover:hover {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+#projects #more {
+  margin-bottom: 105px; }
+
+#map {
+  margin-bottom: 110px; }
+
+#feedback {
+  width: 565px;
+  margin-bottom: 125px; }
+  #feedback * {
+    display: block; }
+  #feedback h1 {
+    color: #f1840a;
+    border-bottom: 4px solid black;
+    font-size: 35px;
+    line-height: 1;
+    margin: 10px 0;
+    padding-bottom: 2px; }
+  #feedback .secLine {
+    margin-bottom: 45px; }
+  #feedback form input, #feedback form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    border: none;
+    background-color: #ebebeb;
+    color: #959595;
+    letter-spacing: 1.8px;
+    padding: 18px 28px; }
+  #feedback form textarea {
+    max-height: 250px;
+    margin-bottom: 43px; }
+
+footer {
+  height: 145px;
+  background-color: #ebebeb; }
+  footer div {
+    padding-top: 15px;
+    font-size: 12px;
+    letter-spacing: 0.2px; }
