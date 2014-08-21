@@ -69,6 +69,11 @@ header {
 			left: 0;
 			top: 0px;
 			width: 148px;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
 		}
 
 		ul {
@@ -132,6 +137,12 @@ header {
 		float: right;
 		margin-top: 20px;
 		cursor: pointer;
+		width: 120px;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
 }
 
@@ -193,6 +204,11 @@ $gap: 35px;
 				.icon {
 					width: 25px;
 					margin-bottom: 30px;
+				
+					img {
+						width: 100%;
+						height: auto;
+					}
 				}
 
 				.name {

@@ -1,6 +1,6 @@
 <?php 
 	$tamplate = '<li><img src="img/projects/project-7.jpg" alt=""><a href="#" class="cover">
-						<img src="img/eye.svg" alt="Подробнее" class="icon">
+						<object data="img/eye.svg" type="image/svg+xml" class="icon"><img src="img/eye.png" alt="Подробнее"></object>
 						<p class="name">Календарь <br>ОАО «Газпром  газораспределение»</p>
 						<p class="type">Печатная продукция</p>
 					</a></li>';
